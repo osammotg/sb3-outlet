@@ -9,54 +9,59 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ====== TOP BAR (scrolling announcements) ====== -->
+  <!-- ====== TOP BAR (scrolling marquee) ====== -->
   <div class="top-bar" id="top-bar">
     <div class="top-bar__track">
       <span class="top-bar__item">
         <span class="fr">Le plus grand surf shop d'Europe</span>
         <span class="en">Europe's Largest Surf Shop</span>
-        <strong> | </strong>
+      </span>
+      <span class="top-bar__sep">&bull;</span>
+      <span class="top-bar__item">
         <span class="fr">Depuis 2002</span>
         <span class="en">Since 2002</span>
       </span>
-      <span class="top-bar__sep">|</span>
+      <span class="top-bar__sep">&bull;</span>
       <span class="top-bar__item">
         <span class="fr">6 shops a Hossegor &amp; Labenne</span>
         <span class="en">6 shops in Hossegor &amp; Labenne</span>
       </span>
-      <span class="top-bar__sep">|</span>
+      <span class="top-bar__sep">&bull;</span>
       <span class="top-bar__item">
         <span class="fr">Surf &bull; Skate &bull; Snow</span>
         <span class="en">Surf &bull; Skate &bull; Snow</span>
       </span>
-      <span class="top-bar__sep">|</span>
+      <span class="top-bar__sep">&bull;</span>
       <span class="top-bar__item">
         <span class="fr">+500m&sup2; de shop technique</span>
         <span class="en">+500m&sup2; Technical Shop</span>
       </span>
-      <span class="top-bar__sep">|</span>
+      <span class="top-bar__sep">&bull;</span>
+      <!-- Duplicate for seamless scroll -->
       <span class="top-bar__item">
         <span class="fr">Le plus grand surf shop d'Europe</span>
         <span class="en">Europe's Largest Surf Shop</span>
-        <strong> | </strong>
+      </span>
+      <span class="top-bar__sep">&bull;</span>
+      <span class="top-bar__item">
         <span class="fr">Depuis 2002</span>
         <span class="en">Since 2002</span>
       </span>
-      <span class="top-bar__sep">|</span>
+      <span class="top-bar__sep">&bull;</span>
       <span class="top-bar__item">
         <span class="fr">6 shops a Hossegor &amp; Labenne</span>
         <span class="en">6 shops in Hossegor &amp; Labenne</span>
       </span>
-      <span class="top-bar__sep">|</span>
+      <span class="top-bar__sep">&bull;</span>
       <span class="top-bar__item">
         <span class="fr">Surf &bull; Skate &bull; Snow</span>
         <span class="en">Surf &bull; Skate &bull; Snow</span>
       </span>
-      <span class="top-bar__sep">|</span>
+      <span class="top-bar__sep">&bull;</span>
       <span class="top-bar__item">
         <span class="fr">+500m&sup2; de shop technique</span>
         <span class="en">+500m&sup2; Technical Shop</span>
@@ -64,11 +69,11 @@
     </div>
   </div>
 
-  <!-- ====== NAV ====== -->
+  <!-- ====== NAV (sticky, shared across all pages) ====== -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <div class="nav__logo">
-        <a href="#">
+        <a href="index.html">
           <div class="logo-badge">
             <span class="logo-badge__main">SB3</span>
             <span class="logo-badge__sub">OUTLET</span>
@@ -78,36 +83,60 @@
       </div>
 
       <ul class="nav__links" id="nav-links">
-        <li><a href="#hero">
-          <span class="fr">Accueil</span>
-          <span class="en">Home</span>
-        </a></li>
-        <li><a href="#all-surf">
-          <span class="fr">Tout le Surf</span>
-          <span class="en">All Surf</span>
-        </a></li>
-        <li><a href="#categories">
-          <span class="fr">Categories</span>
-          <span class="en">Categories</span>
-        </a></li>
-        <li><a href="#brands">
-          <span class="fr">Marques</span>
-          <span class="en">Brands</span>
-        </a></li>
-        <li><a href="#reviews">
-          <span class="fr">Avis</span>
-          <span class="en">Reviews</span>
-        </a></li>
-        <li><a href="#shops">
-          <span class="fr">Nos Shops</span>
-          <span class="en">Our Shops</span>
-        </a></li>
+        <li>
+          <a href="index.html" class="nav__link nav__link--active">
+            <span class="fr">Accueil</span>
+            <span class="en">Home</span>
+          </a>
+        </li>
+        <li class="nav__dropdown">
+          <button class="nav__link nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            <span class="fr">Shop</span>
+            <span class="en">Shop</span>
+            <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="surf.html">Surf</a></li>
+            <li><a href="skate.html">Skate</a></li>
+            <li><a href="snow.html">Snow</a></li>
+            <li><a href="clothing.html"><span class="fr">Vetements</span><span class="en">Clothing</span></a></li>
+            <li><a href="shoes.html"><span class="fr">Chaussures</span><span class="en">Shoes</span></a></li>
+            <li><a href="accessories.html"><span class="fr">Accessoires</span><span class="en">Accessories</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="brands.html" class="nav__link">
+            <span class="fr">Marques</span>
+            <span class="en">Brands</span>
+          </a>
+        </li>
+        <li>
+          <a href="shops.html" class="nav__link">
+            <span class="fr">Nos Shops</span>
+            <span class="en">Our Shops</span>
+          </a>
+        </li>
+        <li>
+          <a href="surf-guide.html" class="nav__link">
+            <span class="fr">Surf Guide</span>
+            <span class="en">Surf Guide</span>
+          </a>
+        </li>
+        <li>
+          <a href="about.html" class="nav__link">
+            <span class="fr">A Propos</span>
+            <span class="en">About</span>
+          </a>
+        </li>
+        <li>
+          <a href="contact.html" class="nav__link">
+            <span class="fr">Contact</span>
+            <span class="en">Contact</span>
+          </a>
+        </li>
       </ul>
 
       <div class="nav__actions">
-        <button class="nav__icon-btn" aria-label="Search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        </button>
         <button class="nav__lang-btn" id="lang-toggle" aria-label="Toggle language">
           <span class="fr">EN</span>
           <span class="en">FR</span>
@@ -119,18 +148,58 @@
     </div>
   </nav>
 
-  <!-- Mobile menu -->
+  <!-- ====== MOBILE MENU (full-screen slide from right) ====== -->
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <a href="#hero"><span class="fr">Accueil</span><span class="en">Home</span></a>
-    <a href="#all-surf"><span class="fr">Tout le Surf</span><span class="en">All Surf</span></a>
-    <a href="#categories"><span class="fr">Categories</span><span class="en">Categories</span></a>
-    <a href="#brands"><span class="fr">Marques</span><span class="en">Brands</span></a>
-    <a href="#reviews"><span class="fr">Avis</span><span class="en">Reviews</span></a>
-    <a href="#shops"><span class="fr">Nos Shops</span><span class="en">Our Shops</span></a>
-    <button class="mobile-menu__lang" id="lang-toggle-mobile">
-      <span class="fr">English</span>
-      <span class="en">Francais</span>
-    </button>
+    <div class="mobile-menu__inner">
+      <a href="index.html" class="mobile-menu__link mobile-menu__link--active">
+        <span class="fr">Accueil</span>
+        <span class="en">Home</span>
+      </a>
+
+      <details class="mobile-menu__details">
+        <summary class="mobile-menu__link">
+          <span class="fr">Shop</span>
+          <span class="en">Shop</span>
+          <svg class="mobile-menu__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="mobile-menu__submenu">
+          <a href="surf.html">Surf</a>
+          <a href="skate.html">Skate</a>
+          <a href="snow.html">Snow</a>
+          <a href="clothing.html"><span class="fr">Vetements</span><span class="en">Clothing</span></a>
+          <a href="shoes.html"><span class="fr">Chaussures</span><span class="en">Shoes</span></a>
+          <a href="accessories.html"><span class="fr">Accessoires</span><span class="en">Accessories</span></a>
+        </div>
+      </details>
+
+      <a href="brands.html" class="mobile-menu__link">
+        <span class="fr">Marques</span>
+        <span class="en">Brands</span>
+      </a>
+      <a href="shops.html" class="mobile-menu__link">
+        <span class="fr">Nos Shops</span>
+        <span class="en">Our Shops</span>
+      </a>
+      <a href="surf-guide.html" class="mobile-menu__link">
+        <span class="fr">Surf Guide</span>
+        <span class="en">Surf Guide</span>
+      </a>
+      <a href="about.html" class="mobile-menu__link">
+        <span class="fr">A Propos</span>
+        <span class="en">About</span>
+      </a>
+      <a href="contact.html" class="mobile-menu__link">
+        <span class="fr">Contact</span>
+        <span class="en">Contact</span>
+      </a>
+
+      <div class="mobile-menu__footer">
+        <button class="mobile-menu__lang" id="lang-toggle-mobile">
+          <span class="fr">English</span>
+          <span class="en">Francais</span>
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- ====== HERO (video background) ====== -->
@@ -143,8 +212,8 @@
     </div>
     <div class="hero__content">
       <p class="hero__eyebrow">
-        <span class="fr">Hossegor &bull; Capitale du Surf</span>
-        <span class="en">Hossegor &bull; Surf Capital</span>
+        <span class="fr">Hossegor &bull; Capitale du Surf en Europe</span>
+        <span class="en">Hossegor &bull; Surf Capital of Europe</span>
       </p>
       <h1 class="hero__title">
         <span class="hero__title-script">
@@ -156,143 +225,236 @@
         <span class="fr">Tout ce qu'il faut pour rider &mdash; vagues, bitume ou montagne</span>
         <span class="en">Everything you need to ride &mdash; waves, pavement, or mountains</span>
       </p>
-      <a href="#all-surf" class="hero__cta">
-        <span class="fr">Decouvrir</span>
-        <span class="en">Explore</span>
-      </a>
+      <div class="hero__ctas">
+        <a href="surf.html" class="hero__cta">
+          <span class="fr">Decouvrir le Shop</span>
+          <span class="en">Explore the Shop</span>
+        </a>
+        <a href="surf-guide.html" class="hero__cta hero__cta--outline">
+          <span class="fr">Surf Guide</span>
+          <span class="en">Surf Guide</span>
+        </a>
+      </div>
     </div>
-    <div class="hero__scroll-hint">
+    <div class="hero__scroll-hint" aria-hidden="true">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
     </div>
   </section>
 
-  <!-- ====== SALE BANNER ====== -->
+  <!-- ====== SALE BANNER (3 cards) ====== -->
   <section class="sale-banner reveal">
     <div class="sale-banner__grid">
-      <a href="#" class="sale-card sale-card--mens">
-        <img src="images/hero-lifestyle.jpg" alt="Men's Sale" loading="lazy">
+      <a href="sale.html" class="sale-card sale-card--mens">
+        <img src="images/hero-lifestyle.jpg" alt="Men's Sale" loading="lazy" width="600" height="400">
         <div class="sale-card__overlay">
-          <p class="sale-card__label"><span class="fr">JUSQU'A</span><span class="en">UP TO</span></p>
-          <p class="sale-card__percent">50%</p>
-          <p class="sale-card__desc"><span class="fr">Homme &mdash; Vetements, Chaussures &amp; Accessoires</span><span class="en">Men's Clothing, Shoes &amp; Accessories</span></p>
-          <span class="sale-card__btn"><span class="fr">SHOP HOMME</span><span class="en">SHOP MENS</span></span>
+          <p class="sale-card__label">
+            <span class="fr">JUSQU'A</span>
+            <span class="en">UP TO</span>
+          </p>
+          <p class="sale-card__percent">50<span>%</span></p>
+          <p class="sale-card__desc">
+            <span class="fr">Homme &mdash; Vetements, Chaussures &amp; Accessoires</span>
+            <span class="en">Men's Clothing, Shoes &amp; Accessories</span>
+          </p>
+          <span class="sale-card__btn">
+            <span class="fr">SHOP HOMME</span>
+            <span class="en">SHOP MENS</span>
+          </span>
         </div>
       </a>
-      <a href="#" class="sale-card sale-card--womens">
-        <img src="images/sale-womens.jpg" alt="Women's Sale" loading="lazy">
+      <a href="sale.html" class="sale-card sale-card--womens">
+        <img src="images/sale-womens.jpg" alt="Women's Sale" loading="lazy" width="600" height="400">
         <div class="sale-card__overlay">
-          <p class="sale-card__label"><span class="fr">JUSQU'A</span><span class="en">UP TO</span></p>
-          <p class="sale-card__percent">50%</p>
-          <p class="sale-card__desc"><span class="fr">Femme &mdash; Vetements, Maillots &amp; Accessoires</span><span class="en">Women's Clothing, Swimwear &amp; Accessories</span></p>
-          <span class="sale-card__btn"><span class="fr">SHOP FEMME</span><span class="en">SHOP WOMENS</span></span>
+          <p class="sale-card__label">
+            <span class="fr">JUSQU'A</span>
+            <span class="en">UP TO</span>
+          </p>
+          <p class="sale-card__percent">50<span>%</span></p>
+          <p class="sale-card__desc">
+            <span class="fr">Femme &mdash; Vetements, Maillots &amp; Accessoires</span>
+            <span class="en">Women's Clothing, Swimwear &amp; Accessories</span>
+          </p>
+          <span class="sale-card__btn">
+            <span class="fr">SHOP FEMME</span>
+            <span class="en">SHOP WOMENS</span>
+          </span>
         </div>
       </a>
-      <a href="#" class="sale-card sale-card--snow">
-        <img src="images/sale-snow.jpg" alt="Snow Sale" loading="lazy">
+      <a href="sale.html" class="sale-card sale-card--snow">
+        <img src="images/sale-snow.jpg" alt="Snow Sale" loading="lazy" width="600" height="400">
         <div class="sale-card__overlay">
-          <p class="sale-card__label"><span class="fr">JUSQU'A</span><span class="en">UP TO</span></p>
-          <p class="sale-card__percent">30%</p>
-          <p class="sale-card__desc"><span class="fr">Snow &mdash; Equipement &amp; Vetements</span><span class="en">Snow Gear &amp; Apparel</span></p>
-          <span class="sale-card__btn"><span class="fr">SHOP SNOW</span><span class="en">SHOP SNOW</span></span>
+          <p class="sale-card__label">
+            <span class="fr">JUSQU'A</span>
+            <span class="en">UP TO</span>
+          </p>
+          <p class="sale-card__percent">30<span>%</span></p>
+          <p class="sale-card__desc">
+            <span class="fr">Snow &mdash; Equipement &amp; Vetements</span>
+            <span class="en">Snow Gear &amp; Apparel</span>
+          </p>
+          <span class="sale-card__btn">
+            <span class="fr">SHOP SNOW</span>
+            <span class="en">SHOP SNOW</span>
+          </span>
         </div>
       </a>
     </div>
   </section>
 
-  <!-- ====== ALL SURF PHOTO GRID (mosaic) ====== -->
+  <!-- ====== ALL SURF MOSAIC GRID ====== -->
   <section class="all-surf" id="all-surf">
     <div class="all-surf__grid reveal">
-      <a href="#" class="all-surf__item all-surf__item--large">
-        <img src="images/all-surf.png" alt="All Surf" loading="lazy">
+      <a href="surf.html" class="all-surf__item all-surf__item--large">
+        <img src="images/all-surf.png" alt="All Surf" loading="lazy" width="800" height="600">
         <div class="all-surf__item-overlay">
           <strong>ALL SURF</strong>
-          <p><span class="fr">Tout le surf qu'il vous faut</span><span class="en">Shop All The Surf Needs</span></p>
+          <p>
+            <span class="fr">Tout le surf qu'il vous faut</span>
+            <span class="en">Everything You Need to Surf</span>
+          </p>
         </div>
       </a>
-      <a href="#" class="all-surf__item">
-        <img src="images/surfboard-spotlight.gif" alt="Surfboard Spotlight" loading="lazy">
+      <a href="surf.html#boards" class="all-surf__item">
+        <img src="images/surfboard-spotlight.gif" alt="Surfboard Spotlight" loading="lazy" width="400" height="400">
         <div class="all-surf__item-overlay">
           <p class="all-surf__item-eyebrow">SURFBOARD SPOTLIGHT</p>
-          <strong>PLANCHES</strong>
-          <p><span class="fr">Notre Selection</span><span class="en">Shop Now</span></p>
+          <strong>
+            <span class="fr">PLANCHES</span>
+            <span class="en">BOARDS</span>
+          </strong>
+          <p>
+            <span class="fr">Notre Selection</span>
+            <span class="en">Shop Now</span>
+          </p>
         </div>
       </a>
-      <a href="#" class="all-surf__item">
-        <img src="images/surf-gear.jpg" alt="Surf Leashes & Accessories" loading="lazy">
+      <a href="accessories.html" class="all-surf__item">
+        <img src="images/surf-gear.jpg" alt="Surf Leashes &amp; Accessories" loading="lazy" width="400" height="400">
         <div class="all-surf__item-overlay">
-          <strong><span class="fr">ACCESSOIRES</span><span class="en">ACCESSORIES</span></strong>
-          <p><span class="fr">Leash, Wax, Derives</span><span class="en">Leashes, Wax, Fins</span></p>
+          <strong>
+            <span class="fr">ACCESSOIRES</span>
+            <span class="en">ACCESSORIES</span>
+          </strong>
+          <p>
+            <span class="fr">Leash, Wax, Derives</span>
+            <span class="en">Leashes, Wax, Fins</span>
+          </p>
         </div>
       </a>
-      <a href="#" class="all-surf__item">
-        <img src="images/lifestyle-wetsuit.webp" alt="Wetsuits" loading="lazy">
+      <a href="surf.html#wetsuits" class="all-surf__item">
+        <img src="images/lifestyle-wetsuit.webp" alt="Wetsuits" loading="lazy" width="400" height="400">
         <div class="all-surf__item-overlay">
-          <strong><span class="fr">COMBINAISONS</span><span class="en">WETSUITS</span></strong>
-          <p><span class="fr">Toutes Saisons</span><span class="en">All Seasons</span></p>
+          <strong>
+            <span class="fr">COMBINAISONS</span>
+            <span class="en">WETSUITS</span>
+          </strong>
+          <p>
+            <span class="fr">Toutes Saisons</span>
+            <span class="en">All Seasons</span>
+          </p>
         </div>
       </a>
-      <a href="#" class="all-surf__item all-surf__item--wide">
-        <img src="images/beach-pier.png" alt="Beach lifestyle" loading="lazy">
+      <a href="about.html" class="all-surf__item all-surf__item--wide">
+        <img src="images/beach-pier.png" alt="Beach lifestyle" loading="lazy" width="800" height="400">
         <div class="all-surf__item-overlay">
-          <strong><span class="fr">LE STYLE DE VIE</span><span class="en">THE LIFESTYLE</span></strong>
-          <p><span class="fr">Plus qu'un shop, un etat d'esprit</span><span class="en">More than a shop, a state of mind</span></p>
+          <strong>
+            <span class="fr">LE STYLE DE VIE</span>
+            <span class="en">THE LIFESTYLE</span>
+          </strong>
+          <p>
+            <span class="fr">Plus qu'un shop, un etat d'esprit</span>
+            <span class="en">More than a shop, a state of mind</span>
+          </p>
         </div>
       </a>
     </div>
   </section>
 
-  <!-- ====== SHOP BY CATEGORY ====== -->
+  <!-- ====== SHOP BY CATEGORY (6 cards) ====== -->
   <section class="categories" id="categories">
-    <h2 class="section-title reveal"><span class="fr">Nos Categories</span><span class="en">Shop By Category</span></h2>
+    <h2 class="section-title reveal">
+      <span class="fr">Nos Categories</span>
+      <span class="en">Shop By Category</span>
+    </h2>
     <div class="categories__grid reveal">
-      <a href="#" class="cat-card">
-        <img src="images/all-surf.png" alt="Surf" loading="lazy">
+      <a href="surf.html" class="cat-card">
+        <img src="images/all-surf.png" alt="Surf" loading="lazy" width="400" height="500">
         <div class="cat-card__overlay">
           <h3>SURF</h3>
-          <p><span class="fr">Planches, Combinaisons, Accessoires</span><span class="en">Boards, Wetsuits, Accessories</span></p>
+          <p>
+            <span class="fr">Planches, Combinaisons, Accessoires</span>
+            <span class="en">Boards, Wetsuits, Accessories</span>
+          </p>
         </div>
       </a>
-      <a href="#" class="cat-card">
-        <img src="images/hero-lifestyle.jpg" alt="Skate" loading="lazy">
+      <a href="skate.html" class="cat-card">
+        <img src="images/hero-lifestyle.jpg" alt="Skate" loading="lazy" width="400" height="500">
         <div class="cat-card__overlay">
           <h3>SKATE</h3>
-          <p><span class="fr">Decks, Trucks, Roues, Protections</span><span class="en">Decks, Trucks, Wheels, Pads</span></p>
+          <p>
+            <span class="fr">Decks, Trucks, Roues, Protections</span>
+            <span class="en">Decks, Trucks, Wheels, Pads</span>
+          </p>
         </div>
       </a>
-      <a href="#" class="cat-card">
-        <img src="images/sale-snow.jpg" alt="Snow" loading="lazy">
+      <a href="snow.html" class="cat-card">
+        <img src="images/sale-snow.jpg" alt="Snow" loading="lazy" width="400" height="500">
         <div class="cat-card__overlay">
           <h3>SNOW</h3>
-          <p><span class="fr">Snowboards, Fixations, Vetements</span><span class="en">Snowboards, Bindings, Apparel</span></p>
+          <p>
+            <span class="fr">Snowboards, Fixations, Vetements</span>
+            <span class="en">Snowboards, Bindings, Apparel</span>
+          </p>
         </div>
       </a>
-      <a href="#" class="cat-card">
-        <img src="images/hero-model.jpg" alt="Clothing" loading="lazy">
+      <a href="clothing.html" class="cat-card">
+        <img src="images/hero-model.jpg" alt="Clothing" loading="lazy" width="400" height="500">
         <div class="cat-card__overlay">
-          <h3><span class="fr">VETEMENTS</span><span class="en">CLOTHING</span></h3>
-          <p><span class="fr">Homme, Femme, Enfant</span><span class="en">Men, Women, Kids</span></p>
+          <h3>
+            <span class="fr">VETEMENTS</span>
+            <span class="en">CLOTHING</span>
+          </h3>
+          <p>
+            <span class="fr">Homme, Femme, Enfant</span>
+            <span class="en">Men, Women, Kids</span>
+          </p>
         </div>
       </a>
-      <a href="#" class="cat-card">
-        <img src="images/sale-womens.jpg" alt="Shoes" loading="lazy">
+      <a href="shoes.html" class="cat-card">
+        <img src="images/sale-womens.jpg" alt="Shoes" loading="lazy" width="400" height="500">
         <div class="cat-card__overlay">
-          <h3><span class="fr">CHAUSSURES</span><span class="en">SHOES</span></h3>
-          <p><span class="fr">Toutes marques</span><span class="en">All brands</span></p>
+          <h3>
+            <span class="fr">CHAUSSURES</span>
+            <span class="en">SHOES</span>
+          </h3>
+          <p>
+            <span class="fr">Toutes marques</span>
+            <span class="en">All brands</span>
+          </p>
         </div>
       </a>
-      <a href="#" class="cat-card">
-        <img src="images/surf-gear.jpg" alt="Accessories" loading="lazy">
+      <a href="accessories.html" class="cat-card">
+        <img src="images/surf-gear.jpg" alt="Accessories" loading="lazy" width="400" height="500">
         <div class="cat-card__overlay">
-          <h3><span class="fr">ACCESSOIRES</span><span class="en">ACCESSORIES</span></h3>
-          <p><span class="fr">Lunettes, Montres, Sacs</span><span class="en">Sunglasses, Watches, Bags</span></p>
+          <h3>
+            <span class="fr">ACCESSOIRES</span>
+            <span class="en">ACCESSORIES</span>
+          </h3>
+          <p>
+            <span class="fr">Lunettes, Montres, Sacs</span>
+            <span class="en">Sunglasses, Watches, Bags</span>
+          </p>
         </div>
       </a>
     </div>
   </section>
 
-  <!-- ====== BRANDS BAR ====== -->
+  <!-- ====== BRANDS BAR (scrolling) ====== -->
   <section class="brands" id="brands">
-    <h2 class="section-title reveal"><span class="fr">Nos Marques</span><span class="en">Our Brands</span></h2>
+    <h2 class="section-title reveal">
+      <span class="fr">Nos Marques</span>
+      <span class="en">Our Brands</span>
+    </h2>
     <div class="brands__track reveal">
       <div class="brands__scroll">
         <span class="brand-logo">BILLABONG</span>
@@ -305,11 +467,14 @@
         <span class="brand-logo">VISSLA</span>
         <span class="brand-logo">VANS</span>
         <span class="brand-logo">NIKE SB</span>
-        <span class="brand-logo">ADIDAS</span>
+        <span class="brand-logo">DC SHOES</span>
+        <span class="brand-logo">ELEMENT</span>
+        <span class="brand-logo">PICTURE</span>
         <span class="brand-logo">SALTY CREW</span>
         <span class="brand-logo">DAKINE</span>
         <span class="brand-logo">FCS</span>
         <span class="brand-logo">CHANNEL ISLANDS</span>
+        <!-- Duplicate for seamless scroll -->
         <span class="brand-logo">BILLABONG</span>
         <span class="brand-logo">QUIKSILVER</span>
         <span class="brand-logo">RIP CURL</span>
@@ -320,7 +485,9 @@
         <span class="brand-logo">VISSLA</span>
         <span class="brand-logo">VANS</span>
         <span class="brand-logo">NIKE SB</span>
-        <span class="brand-logo">ADIDAS</span>
+        <span class="brand-logo">DC SHOES</span>
+        <span class="brand-logo">ELEMENT</span>
+        <span class="brand-logo">PICTURE</span>
         <span class="brand-logo">SALTY CREW</span>
         <span class="brand-logo">DAKINE</span>
         <span class="brand-logo">FCS</span>
@@ -329,78 +496,154 @@
     </div>
   </section>
 
-  <!-- ====== FEATURED PRODUCTS ====== -->
+  <!-- ====== FEATURED PRODUCTS (8 cards with tabs) ====== -->
   <section class="products" id="products">
-    <h2 class="section-title reveal"><span class="fr">Vos Favoris</span><span class="en">Your Favorites</span></h2>
+    <h2 class="section-title reveal">
+      <span class="fr">Vos Favoris</span>
+      <span class="en">Your Favorites</span>
+    </h2>
     <div class="products__tabs reveal">
-      <button class="products__tab products__tab--active" data-tab="all"><span class="fr">Tout</span><span class="en">All</span></button>
-      <button class="products__tab" data-tab="mens"><span class="fr">Homme</span><span class="en">Mens</span></button>
-      <button class="products__tab" data-tab="womens"><span class="fr">Femme</span><span class="en">Womens</span></button>
-      <button class="products__tab" data-tab="kids"><span class="fr">Enfant</span><span class="en">Kids</span></button>
-      <button class="products__tab" data-tab="gear"><span class="fr">Equipement</span><span class="en">Gear</span></button>
+      <button class="products__tab products__tab--active" data-tab="all">
+        <span class="fr">Tout</span>
+        <span class="en">All</span>
+      </button>
+      <button class="products__tab" data-tab="mens">
+        <span class="fr">Homme</span>
+        <span class="en">Mens</span>
+      </button>
+      <button class="products__tab" data-tab="womens">
+        <span class="fr">Femme</span>
+        <span class="en">Womens</span>
+      </button>
+      <button class="products__tab" data-tab="kids">
+        <span class="fr">Enfant</span>
+        <span class="en">Kids</span>
+      </button>
+      <button class="products__tab" data-tab="gear">
+        <span class="fr">Equipement</span>
+        <span class="en">Gear</span>
+      </button>
     </div>
     <div class="products__grid reveal">
+      <!-- Product 1 -->
       <div class="product-card" data-category="mens gear">
-        <div class="product-card__img"><img src="images/lifestyle-wetsuit.webp" alt="Combinaison 4/3" loading="lazy"><span class="product-card__badge">-30%</span></div>
+        <div class="product-card__img">
+          <img src="images/lifestyle-wetsuit.webp" alt="Combinaison 4/3" loading="lazy" width="300" height="400">
+          <span class="product-card__badge">-30%</span>
+        </div>
         <div class="product-card__info">
           <p class="product-card__brand">RIP CURL</p>
-          <p class="product-card__name"><span class="fr">Combinaison Flashbomb 4/3</span><span class="en">Flashbomb 4/3 Wetsuit</span></p>
-          <p class="product-card__price"><span class="product-card__price--old">349&euro;</span> 244&euro;</p>
+          <p class="product-card__name">
+            <span class="fr">Combinaison Flashbomb 4/3</span>
+            <span class="en">Flashbomb 4/3 Wetsuit</span>
+          </p>
+          <p class="product-card__price">
+            <span class="product-card__price--old">349&euro;</span> 244&euro;
+          </p>
         </div>
       </div>
+      <!-- Product 2 -->
       <div class="product-card" data-category="gear">
-        <div class="product-card__img"><img src="images/surf-gear.jpg" alt="Leash" loading="lazy"></div>
+        <div class="product-card__img">
+          <img src="images/surf-gear.jpg" alt="Leash" loading="lazy" width="300" height="400">
+        </div>
         <div class="product-card__info">
           <p class="product-card__brand">CREATURES OF LEISURE</p>
-          <p class="product-card__name"><span class="fr">Leash Reliance Longboard 9'</span><span class="en">Reliance Longboard 9' Leash</span></p>
+          <p class="product-card__name">
+            <span class="fr">Leash Reliance Longboard 9'</span>
+            <span class="en">Reliance Longboard 9' Leash</span>
+          </p>
           <p class="product-card__price">34&euro;</p>
         </div>
       </div>
+      <!-- Product 3 -->
       <div class="product-card" data-category="womens">
-        <div class="product-card__img"><img src="images/sale-womens.jpg" alt="Sweatshirt" loading="lazy"><span class="product-card__badge">-40%</span></div>
+        <div class="product-card__img">
+          <img src="images/sale-womens.jpg" alt="Sweatshirt" loading="lazy" width="300" height="400">
+          <span class="product-card__badge">-40%</span>
+        </div>
         <div class="product-card__info">
           <p class="product-card__brand">BILLABONG</p>
-          <p class="product-card__name"><span class="fr">Sweat All Time Fleece</span><span class="en">All Time Fleece P/O Sweatshirt</span></p>
-          <p class="product-card__price"><span class="product-card__price--old">89&euro;</span> 53&euro;</p>
+          <p class="product-card__name">
+            <span class="fr">Sweat All Time Fleece</span>
+            <span class="en">All Time Fleece P/O Sweatshirt</span>
+          </p>
+          <p class="product-card__price">
+            <span class="product-card__price--old">89&euro;</span> 53&euro;
+          </p>
         </div>
       </div>
+      <!-- Product 4 -->
       <div class="product-card" data-category="gear">
-        <div class="product-card__img"><img src="images/surfboard-spotlight.gif" alt="Surfboard" loading="lazy"><span class="product-card__badge product-card__badge--new">NEW</span></div>
+        <div class="product-card__img">
+          <img src="images/surfboard-spotlight.gif" alt="Surfboard" loading="lazy" width="300" height="400">
+          <span class="product-card__badge product-card__badge--new">NEW</span>
+        </div>
         <div class="product-card__info">
           <p class="product-card__brand">JS INDUSTRIES</p>
           <p class="product-card__name">Xero Gravity</p>
           <p class="product-card__price">699&euro;</p>
         </div>
       </div>
+      <!-- Product 5 -->
       <div class="product-card" data-category="mens">
-        <div class="product-card__img"><img src="images/hero-campaign.jpg" alt="T-shirt" loading="lazy"></div>
+        <div class="product-card__img">
+          <img src="images/hero-campaign.jpg" alt="T-shirt" loading="lazy" width="300" height="400">
+        </div>
         <div class="product-card__info">
           <p class="product-card__brand">VOLCOM</p>
-          <p class="product-card__name"><span class="fr">T-shirt Stone Blanks</span><span class="en">Stone Blanks Tee</span></p>
+          <p class="product-card__name">
+            <span class="fr">T-shirt Stone Blanks</span>
+            <span class="en">Stone Blanks Tee</span>
+          </p>
           <p class="product-card__price">29&euro;</p>
         </div>
       </div>
+      <!-- Product 6 -->
       <div class="product-card" data-category="womens kids">
-        <div class="product-card__img"><img src="images/hero-model.jpg" alt="Bikini" loading="lazy"><span class="product-card__badge">-20%</span></div>
+        <div class="product-card__img">
+          <img src="images/hero-model.jpg" alt="Bikini" loading="lazy" width="300" height="400">
+          <span class="product-card__badge">-20%</span>
+        </div>
         <div class="product-card__info">
           <p class="product-card__brand">ROXY</p>
-          <p class="product-card__name"><span class="fr">Bikini Summer Vibes</span><span class="en">Summer Vibes Bikini</span></p>
-          <p class="product-card__price"><span class="product-card__price--old">59&euro;</span> 47&euro;</p>
+          <p class="product-card__name">
+            <span class="fr">Bikini Summer Vibes</span>
+            <span class="en">Summer Vibes Bikini</span>
+          </p>
+          <p class="product-card__price">
+            <span class="product-card__price--old">59&euro;</span> 47&euro;
+          </p>
         </div>
       </div>
+      <!-- Product 7 -->
       <div class="product-card" data-category="gear">
-        <div class="product-card__img"><img src="images/sale-snow.jpg" alt="Casque Snow" loading="lazy"><span class="product-card__badge">-25%</span></div>
+        <div class="product-card__img">
+          <img src="images/sale-snow.jpg" alt="Casque Snow" loading="lazy" width="300" height="400">
+          <span class="product-card__badge">-25%</span>
+        </div>
         <div class="product-card__info">
           <p class="product-card__brand">SMITH</p>
-          <p class="product-card__name"><span class="fr">Casque Method Pro MIPS</span><span class="en">Method Pro MIPS Helmet</span></p>
-          <p class="product-card__price"><span class="product-card__price--old">180&euro;</span> 135&euro;</p>
+          <p class="product-card__name">
+            <span class="fr">Casque Method Pro MIPS</span>
+            <span class="en">Method Pro MIPS Helmet</span>
+          </p>
+          <p class="product-card__price">
+            <span class="product-card__price--old">180&euro;</span> 135&euro;
+          </p>
         </div>
       </div>
+      <!-- Product 8 -->
       <div class="product-card" data-category="mens">
-        <div class="product-card__img"><img src="images/beach-pier.png" alt="Boardshort" loading="lazy"></div>
+        <div class="product-card__img">
+          <img src="images/beach-pier.png" alt="Boardshort" loading="lazy" width="300" height="400">
+        </div>
         <div class="product-card__info">
           <p class="product-card__brand">HURLEY</p>
-          <p class="product-card__name"><span class="fr">Boardshort Phantom</span><span class="en">Phantom Boardshort</span></p>
+          <p class="product-card__name">
+            <span class="fr">Boardshort Phantom</span>
+            <span class="en">Phantom Boardshort</span>
+          </p>
           <p class="product-card__price">65&euro;</p>
         </div>
       </div>
@@ -409,113 +652,120 @@
 
   <!-- ====== GOOGLE REVIEWS ====== -->
   <section class="reviews" id="reviews">
-    <h2 class="section-title reveal"><span class="fr">Ce que disent nos clients</span><span class="en">What Our Customers Say</span></h2>
+    <h2 class="section-title reveal">
+      <span class="fr">Ce que disent nos clients</span>
+      <span class="en">What Our Customers Say</span>
+    </h2>
     <div class="reviews__summaries reveal">
       <div class="reviews__summary">
         <h3>SB3 Outlet</h3>
-        <div class="reviews__stars">
-          <svg viewBox="0 0 120 20" class="stars-svg"><defs><linearGradient id="star41"><stop offset="82%" stop-color="#f4b400"/><stop offset="82%" stop-color="#ddd"/></linearGradient></defs><text x="0" y="16" font-size="18" fill="url(#star41)">&#9733;&#9733;&#9733;&#9733;&#9733;</text></svg>
+        <div class="reviews__stars" aria-label="4.1 out of 5 stars">
+          <svg viewBox="0 0 120 20" class="stars-svg" role="img">
+            <defs>
+              <linearGradient id="star41">
+                <stop offset="82%" stop-color="#f4b400"/>
+                <stop offset="82%" stop-color="#ddd"/>
+              </linearGradient>
+            </defs>
+            <text x="0" y="16" font-size="18" fill="url(#star41)">&#9733;&#9733;&#9733;&#9733;&#9733;</text>
+          </svg>
         </div>
         <p class="reviews__rating">4.1 / 5</p>
-        <p class="reviews__count">520+ <span class="fr">avis Google</span><span class="en">Google reviews</span></p>
+        <p class="reviews__count">521+ <span class="fr">avis Google</span><span class="en">Google reviews</span></p>
       </div>
       <div class="reviews__summary">
-        <h3>Le Chapiteau</h3>
-        <div class="reviews__stars">
-          <svg viewBox="0 0 120 20" class="stars-svg"><defs><linearGradient id="star31"><stop offset="62%" stop-color="#f4b400"/><stop offset="62%" stop-color="#ddd"/></linearGradient></defs><text x="0" y="16" font-size="18" fill="url(#star31)">&#9733;&#9733;&#9733;&#9733;&#9733;</text></svg>
+        <h3>SB3 Labenne</h3>
+        <div class="reviews__stars" aria-label="4.5 out of 5 stars">
+          <svg viewBox="0 0 120 20" class="stars-svg" role="img">
+            <defs>
+              <linearGradient id="star45">
+                <stop offset="90%" stop-color="#f4b400"/>
+                <stop offset="90%" stop-color="#ddd"/>
+              </linearGradient>
+            </defs>
+            <text x="0" y="16" font-size="18" fill="url(#star45)">&#9733;&#9733;&#9733;&#9733;&#9733;</text>
+          </svg>
         </div>
-        <p class="reviews__rating">3.1 / 5</p>
-        <p class="reviews__count">14 <span class="fr">avis Google</span><span class="en">Google reviews</span></p>
+        <p class="reviews__rating">4.5 / 5</p>
+        <p class="reviews__count">181+ <span class="fr">avis Google</span><span class="en">Google reviews</span></p>
       </div>
     </div>
     <div class="reviews__grid reveal">
       <div class="review-card">
         <div class="review-card__header">
           <div class="review-card__avatar">M</div>
-          <div><p class="review-card__name">Marie L.</p><p class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+          <div>
+            <p class="review-card__name">Marie L.</p>
+            <p class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          </div>
         </div>
-        <p class="review-card__text"><span class="fr">"Enorme choix de combinaisons et planches. Le personnel est super sympa et de bon conseil. Le plus grand surf shop que j'ai jamais vu !"</span><span class="en">"Huge selection of wetsuits and boards. Staff is super friendly and knowledgeable. The biggest surf shop I've ever seen!"</span></p>
+        <p class="review-card__text">
+          <span class="fr">"Enorme choix de combinaisons et planches. Le personnel est super sympa et de bon conseil. Le plus grand surf shop que j'ai jamais vu !"</span>
+          <span class="en">"Huge selection of wetsuits and boards. Staff is super friendly and knowledgeable. The biggest surf shop I've ever seen!"</span>
+        </p>
       </div>
       <div class="review-card">
         <div class="review-card__header">
           <div class="review-card__avatar">T</div>
-          <div><p class="review-card__name">Thomas B.</p><p class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734;</p></div>
+          <div>
+            <p class="review-card__name">Thomas B.</p>
+            <p class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+          </div>
         </div>
-        <p class="review-card__text"><span class="fr">"Prix outlet vraiment interessants, surtout en fin de saison. Beaucoup de marques connues. Je recommande pour l'equipement snow aussi."</span><span class="en">"Really good outlet prices, especially end of season. Lots of well-known brands. I recommend for snow gear too."</span></p>
+        <p class="review-card__text">
+          <span class="fr">"Prix outlet vraiment interessants, surtout en fin de saison. Beaucoup de marques connues. Je recommande pour l'equipement snow aussi."</span>
+          <span class="en">"Really good outlet prices, especially end of season. Lots of well-known brands. I recommend for snow gear too."</span>
+        </p>
       </div>
       <div class="review-card">
         <div class="review-card__header">
           <div class="review-card__avatar">S</div>
-          <div><p class="review-card__name">Sophie D.</p><p class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+          <div>
+            <p class="review-card__name">Sophie D.</p>
+            <p class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          </div>
         </div>
-        <p class="review-card__text"><span class="fr">"On y va chaque ete ! Les enfants adorent le rayon skate et ma fille a trouve une super combi. Ambiance decontractee, comme a la plage."</span><span class="en">"We go every summer! Kids love the skate section and my daughter found an awesome wetsuit. Laid-back vibe, like being at the beach."</span></p>
+        <p class="review-card__text">
+          <span class="fr">"On y va chaque ete ! Les enfants adorent le rayon skate et ma fille a trouve une super combi. Ambiance decontractee, comme a la plage."</span>
+          <span class="en">"We go every summer! Kids love the skate section and my daughter found an awesome wetsuit. Laid-back vibe, like being at the beach."</span>
+        </p>
       </div>
       <div class="review-card">
         <div class="review-card__header">
           <div class="review-card__avatar">J</div>
-          <div><p class="review-card__name">Jean-Pierre M.</p><p class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734;</p></div>
+          <div>
+            <p class="review-card__name">Jean-Pierre M.</p>
+            <p class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+          </div>
         </div>
-        <p class="review-card__text"><span class="fr">"1500m2 de magasin, c'est impressionnant. On trouve tout : du surf au snow en passant par le skate. Prix competitifs pour un outlet."</span><span class="en">"1500m2 of shop space, it's impressive. You find everything: from surf to snow to skate. Competitive prices for an outlet."</span></p>
+        <p class="review-card__text">
+          <span class="fr">"1500m2 de magasin, c'est impressionnant. On trouve tout : du surf au snow en passant par le skate. Prix competitifs pour un outlet."</span>
+          <span class="en">"1500m2 of shop space, it's impressive. You find everything: from surf to snow to skate. Competitive prices for an outlet."</span>
+        </p>
       </div>
     </div>
     <div class="reviews__cta reveal">
       <a href="https://www.google.com/maps/place/SB3+Outlet/@43.6656,-1.3916,17z/" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
-        <span class="fr">Voir tous les avis sur Google</span><span class="en">See all reviews on Google</span>
+        <span class="fr">Voir tous les avis sur Google</span>
+        <span class="en">See all reviews on Google</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
       </a>
-    </div>
-  </section>
-
-  <!-- ====== OUR SHOPS ====== -->
-  <section class="shops" id="shops">
-    <h2 class="section-title reveal"><span class="fr">Nos Shops</span><span class="en">Our Shops</span></h2>
-    <p class="shops__intro reveal"><span class="fr">6 magasins dans le Parc d'Activites Pedebert, Soorts-Hossegor &mdash; au coeur de la capitale europeenne du surf.</span><span class="en">6 shops in the Pedebert Business Park, Soorts-Hossegor &mdash; in the heart of Europe's surf capital.</span></p>
-    <div class="shops__grid reveal">
-      <div class="shop-card shop-card--featured">
-        <div class="shop-card__info">
-          <h3>SB3 Outlet</h3>
-          <p class="shop-card__badge">1500m&sup2; &bull; FLAGSHIP</p>
-          <p class="shop-card__address">213 Avenue de la Tuileire<br>40150 Soorts-Hossegor</p>
-          <p class="shop-card__details"><span class="fr">Shop technique 500m&sup2;+ &bull; Homme, Femme, Enfant, Chaussures</span><span class="en">500m&sup2;+ Technical Shop &bull; Men, Women, Kids, Shoes</span></p>
-          <p class="shop-card__hours"><span class="fr">Lun-Sam 10h-20h &bull; Dim 10h-19h</span><span class="en">Mon-Sat 10am-8pm &bull; Sun 10am-7pm</span></p>
-          <p class="shop-card__phone"><a href="tel:+33558471656">+33 5 58 47 16 56</a></p>
-          <a href="mailto:outlet@sb3.fr" class="shop-card__email">outlet@sb3.fr</a>
-        </div>
-        <div class="shop-card__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.5!2d-1.3916!3d43.6656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5515e6e6c5c6c7%3A0x6c6c6c6c6c6c6c6c!2sSB3%20Outlet!5e0!3m2!1sfr!2sfr!4v1" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" title="SB3 Outlet Map"></iframe>
-        </div>
-      </div>
-      <div class="shop-card">
-        <div class="shop-card__info">
-          <h3>Le Chapiteau</h3>
-          <p class="shop-card__address">439 Avenue des Artisans<br>40150 Soorts-Hossegor</p>
-          <p class="shop-card__details"><span class="fr">Homme, Femme, Enfant &bull; Chaussures</span><span class="en">Men, Women, Kids &bull; Shoes</span></p>
-        </div>
-      </div>
-      <div class="shop-card">
-        <div class="shop-card__info">
-          <h3>Le Labo</h3>
-          <p class="shop-card__address">81 Avenue des Artisans<br>40150 Soorts-Hossegor</p>
-          <p class="shop-card__details"><span class="fr">Surfwear &bull; Lifestyle</span><span class="en">Surfwear &bull; Lifestyle</span></p>
-        </div>
-      </div>
-      <div class="shop-card">
-        <div class="shop-card__info">
-          <h3>La Centrale</h3>
-          <p class="shop-card__address">7 Avenue des Tonneliers<br>40150 Soorts-Hossegor</p>
-          <p class="shop-card__details"><span class="fr">Surfwear &bull; Chaussures &bull; Homme &amp; Femme</span><span class="en">Surfwear &bull; Shoes &bull; Men &amp; Women</span></p>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- ====== NEWSLETTER ====== -->
   <section class="newsletter reveal">
     <div class="newsletter__inner">
-      <h2 class="newsletter__title"><span class="fr">Promos. Nouveautes. Alertes.</span><span class="en">Discounts. New Arrivals. Drop Alerts.</span></h2>
-      <p class="newsletter__desc"><span class="fr">Inscrivez-vous pour recevoir nos offres et etre informe des nouvelles collections.</span><span class="en">Subscribe for store updates and discounts. Be the first to know about new collections and exclusive offers.</span></p>
+      <h2 class="newsletter__title">
+        <span class="fr">Promos. Nouveautes. Alertes.</span>
+        <span class="en">Discounts. New Arrivals. Drop Alerts.</span>
+      </h2>
+      <p class="newsletter__desc">
+        <span class="fr">Inscrivez-vous pour recevoir nos offres et etre informe des nouvelles collections.</span>
+        <span class="en">Subscribe for store updates and discounts. Be the first to know about new collections and exclusive offers.</span>
+      </p>
       <form class="newsletter__form" onsubmit="event.preventDefault();">
-        <input type="email" class="newsletter__input" placeholder="Email" required>
+        <input type="email" class="newsletter__input" placeholder="Email" required aria-label="Email">
         <button type="submit" class="newsletter__btn" aria-label="Subscribe">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
@@ -523,9 +773,10 @@
     </div>
   </section>
 
-  <!-- ====== FOOTER ====== -->
+  <!-- ====== FOOTER (4 columns) ====== -->
   <footer class="footer">
     <div class="footer__top">
+      <!-- Column 1: Logo + tagline + social -->
       <div class="footer__col">
         <div class="footer__logo">
           <div class="logo-badge logo-badge--light">
@@ -534,7 +785,10 @@
             <span class="logo-badge__est">EST. 2002</span>
           </div>
         </div>
-        <p class="footer__tagline"><span class="fr">Le plus grand surf shop d'Europe.<br>Surf &bull; Skate &bull; Snow depuis 2002.</span><span class="en">Europe's largest surf shop.<br>Surf &bull; Skate &bull; Snow since 2002.</span></p>
+        <p class="footer__tagline">
+          <span class="fr">Le plus grand surf shop d'Europe.<br>Surf &bull; Skate &bull; Snow depuis 2002.</span>
+          <span class="en">Europe's largest surf shop.<br>Surf &bull; Skate &bull; Snow since 2002.</span>
+        </p>
         <div class="footer__social">
           <a href="https://www.facebook.com/sb3outlethossegor/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -542,34 +796,56 @@
           <a href="https://www.instagram.com/sb3surfshop/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           </a>
+          <a href="https://www.tiktok.com/@sb3surfshop" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13a8.28 8.28 0 005.58 2.17V11.7a4.83 4.83 0 01-3.77-1.24V6.69h3.77z"/></svg>
+          </a>
         </div>
       </div>
+
+      <!-- Column 2: Le Shop links -->
       <div class="footer__col">
-        <h4><span class="fr">Le Shop</span><span class="en">The Shop</span></h4>
+        <h4>
+          <span class="fr">Le Shop</span>
+          <span class="en">The Shop</span>
+        </h4>
         <ul>
-          <li><a href="#">Surf</a></li>
-          <li><a href="#">Skate</a></li>
-          <li><a href="#">Snow</a></li>
-          <li><a href="#"><span class="fr">Vetements</span><span class="en">Clothing</span></a></li>
-          <li><a href="#"><span class="fr">Chaussures</span><span class="en">Shoes</span></a></li>
-          <li><a href="#"><span class="fr">Accessoires</span><span class="en">Accessories</span></a></li>
+          <li><a href="surf.html">Surf</a></li>
+          <li><a href="skate.html">Skate</a></li>
+          <li><a href="snow.html">Snow</a></li>
+          <li><a href="clothing.html"><span class="fr">Vetements</span><span class="en">Clothing</span></a></li>
+          <li><a href="shoes.html"><span class="fr">Chaussures</span><span class="en">Shoes</span></a></li>
+          <li><a href="accessories.html"><span class="fr">Accessoires</span><span class="en">Accessories</span></a></li>
+          <li><a href="brands.html"><span class="fr">Marques</span><span class="en">Brands</span></a></li>
         </ul>
       </div>
+
+      <!-- Column 3: Infos links -->
       <div class="footer__col">
-        <h4><span class="fr">Infos</span><span class="en">Info</span></h4>
+        <h4>
+          <span class="fr">Infos</span>
+          <span class="en">Info</span>
+        </h4>
         <ul>
-          <li><a href="#"><span class="fr">A Propos</span><span class="en">About Us</span></a></li>
-          <li><a href="#shops"><span class="fr">Nos Shops</span><span class="en">Our Shops</span></a></li>
-          <li><a href="#"><span class="fr">Contact</span><span class="en">Contact</span></a></li>
-          <li><a href="#reviews"><span class="fr">Avis</span><span class="en">Reviews</span></a></li>
+          <li><a href="about.html"><span class="fr">A Propos</span><span class="en">About Us</span></a></li>
+          <li><a href="shops.html"><span class="fr">Nos Shops</span><span class="en">Our Shops</span></a></li>
+          <li><a href="surf-guide.html"><span class="fr">Surf Guide</span><span class="en">Surf Guide</span></a></li>
+          <li><a href="contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a></li>
+          <li><a href="sale.html"><span class="fr">Soldes</span><span class="en">Sale</span></a></li>
         </ul>
       </div>
+
+      <!-- Column 4: Contact info -->
       <div class="footer__col">
-        <h4><span class="fr">Nous Contacter</span><span class="en">Contact Us</span></h4>
-        <p>213 Avenue de la Tuileire<br>40150 Soorts-Hossegor</p>
-        <p><a href="tel:+33558471656">+33 5 58 47 16 56</a></p>
-        <p><a href="mailto:outlet@sb3.fr">outlet@sb3.fr</a></p>
-        <p><a href="https://sb3surfshop.fr" target="_blank" rel="noopener noreferrer">sb3surfshop.fr</a></p>
+        <h4>
+          <span class="fr">Nous Contacter</span>
+          <span class="en">Contact Us</span>
+        </h4>
+        <address class="footer__address">
+          <p>213 Avenue de la Tuileire<br>40150 Soorts-Hossegor</p>
+          <p><a href="tel:+33558471656">+33 5 58 47 16 56</a></p>
+          <p><a href="mailto:outlet@sb3.fr">outlet@sb3.fr</a></p>
+          <p><a href="https://sb3surfshop.fr" target="_blank" rel="noopener noreferrer">sb3surfshop.fr</a></p>
+        </address>
       </div>
     </div>
     <div class="footer__bottom">
@@ -577,6 +853,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
